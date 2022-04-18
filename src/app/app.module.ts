@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { FormsModule } from '@angular/forms';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DirComponent } from './dir/dir.component';
     HomeComponent,
     AboutComponent,
     DatabindingComponent,
-    DirComponent
+    DirComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
