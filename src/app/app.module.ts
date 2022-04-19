@@ -10,6 +10,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
 import { HighlightDirective } from './highlight.directive';
 import { PipeComponent } from './pipe/pipe.component';
+import { ReversePipe } from './reverse.pipe';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { PipeComponent } from './pipe/pipe.component';
     DirComponent,
     HighlightDirective,
     PipeComponent,
+    ReversePipe,
 
   ],
   imports: [

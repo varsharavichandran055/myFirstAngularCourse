@@ -16,7 +16,7 @@
     <tr *ngFor="let item of employees ; let i=index">
       <td>{{i+1}}</td>
       <td>{{item.name | uppercase}}</td>
-      <td>{{item.address | lowercase}}</td>
+      <td>{{item.address | lowercase | reverse}}</td>
       <td>{{item.salary | currency:'INR'}}</td>
       <td>{{item.joining | date:'dd/MM/yyyy'}}</td>
     </tr>
