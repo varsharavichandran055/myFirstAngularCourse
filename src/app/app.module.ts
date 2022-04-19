@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
 import { HighlightDirective } from './highlight.directive';
+import { PipeComponent } from './pipe/pipe.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HighlightDirective } from './highlight.directive';
     AboutComponent,
     DatabindingComponent,
     DirComponent,
-    HighlightDirective
+    HighlightDirective,
+    PipeComponent,
+
   ],
   imports: [
     BrowserModule,
