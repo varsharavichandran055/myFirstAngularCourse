@@ -17,11 +17,20 @@
           <a class="nav-link" [routerLink]="['/pipe']">Pipe</a>
         </li>
         <li class="nav-item">
-          <li [routerLinkActive]="['active']">
-          <a class="nav-link" [routerLink]="['/product',4,'Prod1']">Product</a>
+          <!-- with single parameter
+          <a class="nav-link" [routerLink]="['/product',4]">ProductParam1</a>
+          with more than 1 parameter -->
+          <!--required parameter-->
+          <a class="nav-link" [routerLink]="['/product',4,'prod1']">Product-R</a>
         </li>
-
-
+        <!--Optional parameter-->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/product',{id:4,prodName:'prod1'}]">Product-O</a>
+        </li>
+        <!--Query parameter-->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/products']" [queryParams]="{id:7,name:'prod1'}">Product-Q</a>
+        </li>
     </ul>
 </nav>
 <div class="container">

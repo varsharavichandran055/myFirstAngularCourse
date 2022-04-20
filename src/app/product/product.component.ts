@@ -8,8 +8,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  pid: number;
-  name:string;
+  pid: number | undefined;
+  name:string | undefined;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {

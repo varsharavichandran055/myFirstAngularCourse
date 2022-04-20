@@ -12,6 +12,8 @@ import { HighlightDirective } from './highlight.directive';
 import { PipeComponent } from './pipe/pipe.component';
 import { ReversePipe } from './reverse.pipe';
 import { ProductComponent } from './product/product.component';
+import { ProductsComponent } from './products/products.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { ProductComponent } from './product/product.component';
     PipeComponent,
     ReversePipe,
     ProductComponent,
+    ProductsComponent,
+    NotfoundComponent,
 
   ],
   imports: [
