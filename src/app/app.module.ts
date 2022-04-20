@@ -36,6 +36,7 @@ import { MembershipComponent } from './membership/membership.component';
     ProfileComponent,
     MembershipComponent,
 
+
   ],
   imports: [
     BrowserModule,

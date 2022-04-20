@@ -22,14 +22,17 @@ const routes: Routes = [
   {path:'product/:id/:prodName',component:ProductComponent},
   {path:'product',component:ProductComponent},
   {path:'products',component:ProductsComponent},
+  {path:'eager',component:HomeComponent},
+  {path:'lazy',loadChildren:()=>import ('./user/user.module').then(x=>x.UserModule)},
+
 
   {path:'account',component:AccountComponent,children:[
     {path:'',component:ProfileComponent},
     {path:'membership',component:MembershipComponent},
   ]
 },
-{path:'notfound',component:NotfoundComponent},
-  {path:'**',redirectTo:'notfound'}
+// {path:'notfound',component:NotfoundComponent},
+//   {path:'**',redirectTo:'notfound'}
 
 
 ];
