@@ -5,13 +5,15 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
 import { HomeComponent } from './home/home.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'databinding',component:DatabindingComponent},
   {path:'directive',component:DirComponent},
-  {path:'pipe',component:PipeComponent}
+  {path:'pipe',component:PipeComponent},
+  {path:'product/:id/:prodName',component:ProductComponent}
 ];
 
 @NgModule({
