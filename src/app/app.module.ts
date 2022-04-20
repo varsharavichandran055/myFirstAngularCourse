@@ -14,6 +14,9 @@ import { ReversePipe } from './reverse.pipe';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AccountComponent } from './account/account.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MembershipComponent } from './membership/membership.component';
 
 
 @NgModule({
@@ -29,6 +32,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     ProductComponent,
     ProductsComponent,
     NotfoundComponent,
+    AccountComponent,
+    ProfileComponent,
+    MembershipComponent,
 
   ],
   imports: [
