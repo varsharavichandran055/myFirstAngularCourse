@@ -17,6 +17,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { AccountComponent } from './account/account.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MembershipComponent } from './membership/membership.component';
+import { MasterComponent } from './master/master.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { MembershipComponent } from './membership/membership.component';
     AccountComponent,
     ProfileComponent,
     MembershipComponent,
+    MasterComponent,
+    DetailsComponent,
 
 
   ],

@@ -5,6 +5,7 @@ import { AccountComponent } from './account/account.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
 import { HomeComponent } from './home/home.component';
+import { MasterComponent } from './master/master.component';
 import { MembershipComponent } from './membership/membership.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PipeComponent } from './pipe/pipe.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'product',component:ProductComponent},
   {path:'products',component:ProductsComponent},
   {path:'eager',component:HomeComponent},
+  {path:'nested',component:MasterComponent},
   {path:'lazy',loadChildren:()=>import ('./user/user.module').then(x=>x.UserModule)},
 
 
@@ -31,8 +33,8 @@ const routes: Routes = [
     {path:'membership',component:MembershipComponent},
   ]
 },
-// {path:'notfound',component:NotfoundComponent},
-//   {path:'**',redirectTo:'notfound'}
+{path:'notfound',component:NotfoundComponent},
+  {path:'**',redirectTo:'notfound'}
 
 
 ];
