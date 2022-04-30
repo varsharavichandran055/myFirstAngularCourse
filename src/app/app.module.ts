@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClient,HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { MembershipComponent } from './membership/membership.component';
 import { MasterComponent } from './master/master.component';
 import { DetailsComponent } from './details/details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -39,12 +42,15 @@ import { DetailsComponent } from './details/details.component';
     MembershipComponent,
     MasterComponent,
     DetailsComponent,
+    ParentComponent,
+    //ChildComponent,
 
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

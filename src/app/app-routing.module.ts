@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AccountComponent } from './account/account.component';
+import { ChildComponent } from './child/child.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
 import { HomeComponent } from './home/home.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'product',component:ProductComponent},
   {path:'products',component:ProductsComponent},
   {path:'eager',component:HomeComponent},
+  {path:'inheritance',component:ChildComponent},
   {path:'nested',component:MasterComponent},
   {path:'lazy',loadChildren:()=>import ('./user/user.module').then(x=>x.UserModule)},
 
