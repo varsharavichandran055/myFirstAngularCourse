@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent implements OnInit {
+export class DetailsComponent implements OnInit ,OnChanges{
   @Input() myCompany:string | undefined;
   @Output() msg:EventEmitter<string>=new EventEmitter<string>();
 
@@ -14,6 +14,9 @@ export class DetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('Child:ngOnChanges');
   }
 
   greet(){
