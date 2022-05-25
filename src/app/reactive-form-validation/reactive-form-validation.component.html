@@ -1,0 +1,42 @@
+<h2>Reactive form validation</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="saveData(userForm)">
+  <div>
+    *Name:<input  type="text" name="Name" formControlName="Name">
+    <div *ngIf="userForm.get('Name')?.errors && userForm.get('Name')?.touched" class="text-danger">
+      Please Enter Name
+
+    </div>
+
+  </div>
+  <div>
+    *Username:<input type="text" name="Username" formControlName="Username">
+  <div *ngIf="userForm.get('Username')?.errors && userForm.get('Username')?.touched" class="text-danger">
+    <span [hidden]="!userForm.get('Username')?.errors?.['required']"> Please enter Username</span>
+    <span [hidden]="!userForm.get('Username')?.errors?.['minlength']">Username must have atleast 4 characters</span>
+
+  </div>
+  </div>
+<div>
+  *Email:<input type="text" name="Email" formControlName="Email">
+  <div *ngIf="userForm.get('Email')?.errors && userForm.get('Email')?.touched" class="text-danger">
+  <span [hidden]="!userForm.get('Email')?.errors?.['required']">Please enter Email</span>
+  <span [hidden]="!userForm.get('Email')?.errors?.['email'] && userForm.get('Email')?.errors?.['required']">Please enter correct email pattern</span>
+
+  </div>
+</div>
+<div>
+  Contact number:<input type="text" name="Contact" formControlName="Contact">
+  <div *ngIf="userForm.get('Contact')?.errors && userForm.get('Contact')?.touched" class="text-danger">
+ Please enter correct contact number
+
+  </div>
+</div>
+
+<div>
+  <input type="submit" value="save">
+
+</div>
+
+
+</form>

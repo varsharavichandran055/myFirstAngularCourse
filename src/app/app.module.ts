@@ -25,6 +25,7 @@ import { ChildComponent } from './child/child.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateFormValidationComponent } from './template-form-validation/template-form-validation.component';
+import { ReactiveFormValidationComponent } from './reactive-form-validation/reactive-form-validation.component';
 
 
 @NgModule({
@@ -49,6 +50,8 @@ import { TemplateFormValidationComponent } from './template-form-validation/temp
     TemplateFormComponent,
     ReactiveFormComponent,
     TemplateFormValidationComponent,
+    ReactiveFormValidationComponent,
+
     //ChildComponent,
 
 
