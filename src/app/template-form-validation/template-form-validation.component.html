@@ -1,0 +1,55 @@
+<h2>Template form </h2>
+<form #userForm="ngForm" (ngSubmit)="saveData(userForm)" >
+  <div>
+*Name:<input type="text" name="Name" #Name="ngModel" [(ngModel)]="user.Name" required />
+<div *ngIf="Name.errors && (Name.touched || userForm.submitted)" class="text-danger">
+Please enter name
+</div>
+</div>
+
+<div>
+  *Username:<input type="text" name="Username" #Username="ngModel" [(ngModel)]="user.Username" required minlength="4" />
+  <div *ngIf="Username.errors && (Username.touched || userForm.submitted)" class="text-danger">
+    <span [hidden]="!Username.errors['required']">Please enter username</span>
+    <span [hidden]="!(!Username.errors['required']&& Username.errors['minlength'])">User must have atleast 4 characters</span>
+
+  </div>
+  </div>
+
+  <div>
+    *Email:<input type="text" name="Email" #Email="ngModel" [(ngModel)]="user.Email" required email />
+    <div *ngIf="Email.errors && (Email.touched || userForm.submitted)" class="text-danger">
+    <span [hidden]="!Email.errors['required']">Please enter email</span>
+    <span [hidden]="!Email.errors['email'] && Email.errors['required']">Email is not correct</span>
+    </div>
+    </div>
+
+    <div>
+      *Address:<input type="text" name="Address" #Address="ngModel" [(ngModel)]="user.Address" required />
+      <div *ngIf="Address.errors && (Address.touched || userForm.submitted)" class="text-danger">
+      Please enter Address
+      </div>
+      </div>
+
+      <div>
+        Contact:<input type="text" name="Contact" #Contact="ngModel" [(ngModel)]="user.Contact" pattern="^[789]\d{9}$" />
+        <div *ngIf="Contact.errors && (Contact.touched || userForm.submitted)" class="text-danger">
+        Please enter correct Contact
+        </div>
+
+        <div>
+          Age:<input type="number" name="Age" #Age="ngModel" [(ngModel)]="user.Age"  required  min="18">
+          <div *ngIf="Age.errors && (Age.touched || userForm.submitted)" class="text-danger">
+            <span [hidden]="!Age.errors['required']">Please enter Age</span>
+            <span [hidden]="!Age.errors['min']">Min. Age must be 18</span>
+          </div>
+        </div>
+
+        </div>
+
+<div>
+  <input type="submit" value="save">
+</div>
+
+
+</form>
