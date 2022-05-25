@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form-validation',
@@ -13,7 +13,8 @@ export class ReactiveFormValidationComponent implements OnInit {
       Name:['',Validators.required],
       Username:['',[Validators.required,Validators.minLength(4)]],
       Email:['',[Validators.required,Validators.email]],
-      Contact:['',[Validators.pattern('^[789\\d{9}$]')]]
+      Contact:['',[Validators.pattern('^[789\\d{9}$]')]],
+      Url:['',[Validators.required,ValidateUrl]]
     })
 
    }
@@ -22,7 +23,23 @@ export class ReactiveFormValidationComponent implements OnInit {
   }
 
   saveData(userForm:any){
-    console.log(this.userForm.value);
+if(userForm.valid){
+  alert('form is valid');
+}else{
+  alert('form is invalid');
+}
   }
+
+
+
+
+
+}
+function ValidateUrl(control:FormControl){
+  if(!control.value.startsWith('https')){
+    return{invalidUrl:true};
+  }
+  return null;
+
 
 }

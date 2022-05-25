@@ -32,6 +32,14 @@
 
   </div>
 </div>
+<div>
+  *Url:<input type="text" name="Url" formControlName="Url">
+  <div *ngIf="userForm.get('Url')?.errors && userForm.get('Url')?.touched" class="text-danger">
+  <span [hidden]="!userForm.get('Url')?.errors?.['required']">Please enter Url</span>
+  <span [hidden]="!(!userForm.get('Url')?.errors?.['required'] && userForm.get('Url')?.errors?.['invalidUrl'])">Only Url served over https are accepted</span>
+
+  </div>
+</div>
 
 <div>
   <input type="submit" value="save">
