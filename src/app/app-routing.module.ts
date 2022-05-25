@@ -13,6 +13,8 @@ import { PipeComponent } from './pipe/pipe.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -27,6 +29,8 @@ const routes: Routes = [
   {path:'eager',component:HomeComponent},
   {path:'inheritance',component:ChildComponent},
   {path:'nested',component:MasterComponent},
+  {path:'templateForm',component:TemplateFormComponent},
+  {path:'reactiveForm',component:ReactiveFormComponent},
   {path:'lazy',loadChildren:()=>import ('./user/user.module').then(x=>x.UserModule)},
 
 

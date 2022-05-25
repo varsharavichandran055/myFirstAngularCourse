@@ -1,0 +1,13 @@
+<h2>Reactive form</h2>
+<hr>
+<form [formGroup]="userForm" (ngSubmit)="saveData(userForm)">
+<div>
+  Name:<input type="text" formControlName="Name">
+</div>
+<div>
+  Email:<input type="email" formControlName="Email">
+</div>
+<div>
+  <input type="submit" value="save">
+</div>
+</form>

@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirComponent } from './dir/dir.component';
 import { HighlightDirective } from './highlight.directive';
@@ -22,6 +22,8 @@ import { MasterComponent } from './master/master.component';
 import { DetailsComponent } from './details/details.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { ChildComponent } from './child/child.component';
     MasterComponent,
     DetailsComponent,
     ParentComponent,
+    TemplateFormComponent,
+    ReactiveFormComponent,
     //ChildComponent,
 
 
@@ -50,6 +54,7 @@ import { ChildComponent } from './child/child.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule
   ],
