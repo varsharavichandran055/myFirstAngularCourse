@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { reduce } from 'rxjs';
 
 @Component({
   selector: 'app-dir',

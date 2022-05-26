@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { MasterComponent } from './master/master.component';
 import { MembershipComponent } from './membership/membership.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ObservableComponent } from './observable/observable.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:'templateForm',component:TemplateFormComponent},
   {path:'reactiveForm',component:ReactiveFormComponent},
   {path:'templateFormValidation',component:TemplateFormValidationComponent},
+  {path:'observable',component:ObservableComponent},
   {path:'reactiveFormValidation',component:ReactiveFormValidationComponent},
   {path:'lazy',loadChildren:()=>import ('./user/user.module').then(x=>x.UserModule)},
 
